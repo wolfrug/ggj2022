@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7395f498b3633b24d87cc2188a68f3ee, type: 3}
+  m_Name: TestLootable
+  m_EditorClassIdentifier: 
+  m_id: testLootable
+  m_displayName: Inventory Test
+  m_clearOnInit: 1
+  m_defaultMaxSlots: 12
+  m_inventoryItemPrefab: {fileID: 2101062367706738013, guid: 975bfb41a639b064f886256847f6c059,
+    type: 3}
+  m_type: 2000
+  m_modifiers: 00000000
+  m_allowContentFrom: e8030000d0070000
+  m_defaultContent:
+  - data: {fileID: 11400000, guid: 674549f098d1a7b428c7089305071148, type: 2}
+    weight: 1
+    guaranteed: 1
+    random_unique: 0
+    randomStackSize: {x: 1, y: 1}
+  - data: {fileID: 11400000, guid: 93d462d357f5b0c448e8e9cf989f3a65, type: 2}
+    weight: 1
+    guaranteed: 1
+    random_unique: 0
+    randomStackSize: {x: 1, y: 1}
+  m_minMaxRandomItemsSpawned: {x: 0, y: 5}
+  m_inventoryCanvasPrefab: {fileID: 0}

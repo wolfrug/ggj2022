@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7395f498b3633b24d87cc2188a68f3ee, type: 3}
+  m_Name: TestInventory2
+  m_EditorClassIdentifier: 
+  m_id: defaultInventory
+  m_displayName: Inventory Test 2
+  m_defaultMaxSlots: 15
+  m_inventoryItemPrefab: {fileID: 2101062367706738013, guid: 975bfb41a639b064f886256847f6c059,
+    type: 3}
+  m_type: 2000
+  m_allowContentFrom: 00000000d0070000
+  m_defaultContent:
+  - data: {fileID: 11400000, guid: a845f1ec0a4d62540a343399cf5619b8, type: 2}
+    weight: 1
+    guaranteed: 0
+    random_unique: 1
+    randomStackSize: {x: 1, y: 1}
+  - data: {fileID: 11400000, guid: c7bddf64e0f83624fa8838999823f6c8, type: 2}
+    weight: 0.5
+    guaranteed: 1
+    random_unique: 0
+    randomStackSize: {x: 1, y: 1}
+  - data: {fileID: 11400000, guid: e988ea15f415eac46929772390bb1532, type: 2}
+    weight: 0.5
+    guaranteed: 0
+    random_unique: 0
+    randomStackSize: {x: 0, y: 2}
+  - data: {fileID: 11400000, guid: 58810f8275a1e8f46b2e598a52cb2506, type: 2}
+    weight: 0.5
+    guaranteed: 0
+    random_unique: 0
+    randomStackSize: {x: 2, y: 5}
+  - data: {fileID: 0}
+    weight: 0.5
+    guaranteed: 0
+    random_unique: 0
+    randomStackSize: {x: 2, y: 5}
+  m_minMaxRandomItemsSpawned: {x: 3, y: 8}
+  m_inventoryCanvasPrefab: {fileID: 0}

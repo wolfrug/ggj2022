@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: a65671b99d9bfaf4b8a7a02e83e9ea69
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4830178328352083277
+    second: Copy of Cameos_reverse_0
+  - first:
+      213: 3535747565217595123
+    second: Copy of Cameos_reverse_1
+  - first:
+      213: 4779992973395206861
+    second: Copy of Cameos_reverse_2
+  - first:
+      213: 5611923076711927680
+    second: Copy of Cameos_reverse_3
+  - first:
+      213: 8238892270730981641
+    second: Copy of Cameos_reverse_4
+  - first:
+      213: 7296250333964051793
+    second: Copy of Cameos_reverse_5
+  - first:
+      213: 3074238820052666621
+    second: Copy of Cameos_reverse_6
+  - first:
+      213: 8377295059918173607
+    second: Copy of Cameos_reverse_7
+  - first:
+      213: -2822449384785205838
+    second: Copy of Cameos_reverse_8
+  - first:
+      213: 7199048555370259486
+    second: Copy of Cameos_reverse_9
+  - first:
+      213: -2717784131132631498
+    second: Copy of Cameos_reverse_10
+  - first:
+      213: 7298461045001963026
+    second: Copy of Cameos_reverse_11
+  - first:
+      213: 9216995893860756845
+    second: Copy of Cameos_reverse_12
+  - first:
+      213: 7073425313947700589
+    second: Copy of Cameos_reverse_13
+  - first:
+      213: -401136828723634521
+    second: Copy of Cameos_reverse_14
+  - first:
+      213: 9113812157424613670
+    second: Copy of Cameos_reverse_15
+  - first:
+      213: -4139289630446579886
+    second: Copy of Cameos_reverse_16
+  - first:
+      213: -4634673159122669138
+    second: Copy of Cameos_reverse_17
+  - first:
+      213: -5114066102735807772
+    second: Copy of Cameos_reverse_18
+  - first:
+      213: 3460015964844646122
+    second: Copy of Cameos_reverse_19
+  - first:
+      213: -8115819729374343621
+    second: Copy of Cameos_reverse_20
+  - first:
+      213: -3025963815445339466
+    second: Copy of Cameos_reverse_21
+  - first:
+      213: -2383451810963697677
+    second: Copy of Cameos_reverse_22
+  - first:
+      213: 7676618663504259091
+    second: Copy of Cameos_reverse_23
+  - first:
+      213: -7343691243956357112
+    second: Copy of Cameos_reverse_24
+  - first:
+      213: -8040447272491411181
+    second: Copy of Cameos_reverse_25
+  - first:
+      213: -7413440649867796777
+    second: Copy of Cameos_reverse_26
+  - first:
+      213: -1552872570138852545
+    second: Copy of Cameos_reverse_27
+  - first:
+      213: -8491720859264154732
+    second: Copy of Cameos_reverse_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 25
+        height: 972
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d4737299d380340800000000000000
+      internalID: 4830178328352083277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 42
+        width: 113
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe3f386daf711130800000000000000
+      internalID: 3535747565217595123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 826
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2a518a842f55240800000000000000
+      internalID: 4779992973395206861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 630
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f4b361e4e81ed40800000000000000
+      internalID: 5611923076711927680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 434
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901b1a36edc665270800000000000000
+      internalID: 8238892270730981641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 237
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155a044850d714560800000000000000
+      internalID: 7296250333964051793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 747
+        height: 972
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df884f73be3e9aa20800000000000000
+      internalID: 3074238820052666621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 630
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5be01e871224470800000000000000
+      internalID: 8377295059918173607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_8
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 826
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5ab5f0d35a4d8d0800000000000000
+      internalID: -2822449384785205838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 42
+        width: 113
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1422a7d48828e360800000000000000
+      internalID: 7199048555370259486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_10
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 434
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63655af6bbd784ad0800000000000000
+      internalID: -2717784131132631498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 237
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2164e5ac6a7594560800000000000000
+      internalID: 7298461045001963026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_12
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 826
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6dedc58ee859ef70800000000000000
+      internalID: 9216995893860756845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 630
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6dcb1fa8dad92260800000000000000
+      internalID: 7073425313947700589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 48
+        width: 113
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aed999fd20ee6af0800000000000000
+      internalID: -401136828723634521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_15
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 237
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6293ee0ced3ca7e70800000000000000
+      internalID: 9113812157424613670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_16
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 434
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f06c2130a4e86c0800000000000000
+      internalID: -4139289630446579886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_17
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 48
+        width: 113
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1b47c31555eafb0800000000000000
+      internalID: -4634673159122669138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_18
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 630
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ead09c99ff2709b0800000000000000
+      internalID: -5114066102735807772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_19
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 243
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeedeb52032740030800000000000000
+      internalID: 3460015964844646122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_20
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 826
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e0981a4f0de5f80800000000000000
+      internalID: -8115819729374343621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_21
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 434
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2e13d21fd9106d0800000000000000
+      internalID: -3025963815445339466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_22
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 630
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff4f3cb4374ceed0800000000000000
+      internalID: -2383451810963697677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_23
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 48
+        width: 113
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3182e428004d88a60800000000000000
+      internalID: 7676618663504259091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_24
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 243
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808b5dfd8b7f51a90800000000000000
+      internalID: -7343691243956357112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_25
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 826
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31914e74ec79a6090800000000000000
+      internalID: -8040447272491411181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_26
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 440
+        width: 113
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de503dc10b2e1990800000000000000
+      internalID: -7413440649867796777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f330d6bff96137ae0800000000000000
+      internalID: -1552872570138852545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copy of Cameos_reverse_28
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 747
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49309cb9ed8572a80800000000000000
+      internalID: -8491720859264154732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
