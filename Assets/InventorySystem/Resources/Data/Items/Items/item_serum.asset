@@ -30,6 +30,6 @@ MonoBehaviour:
   m_maxStackSize: 1
   m_sizeInInventory: 1
   m_amountConsumedPerUse: {x: 0, y: 0}
-  m_minimumNeededToConsume: 0
+  m_minimumNeededToConsume: 1
   m_prefab: {fileID: 8802080752378620606, guid: 085a55f2c21a54d469c4d69df6d8ae90,
     type: 3}

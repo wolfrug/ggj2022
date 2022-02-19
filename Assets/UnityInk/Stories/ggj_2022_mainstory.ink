@@ -17,6 +17,23 @@ With many lines.
 Very nice.
 ->DONE
 
+==cannot_use_item
+// Always triggered as a world-say.
+{~That's not right.|Hmm. No.|Ugh. Stupid.}
+->DONE
+
+==useItemTest
+~temp usedItem = ConvertToItem(lastUsedItem)
+{usedItem:
+- item_key:
+#spawn.portrait.avery
+You show the key to Mr. Avery. He gets visibly upset.
+
+"That's not what it looks like!"
+{Add(clue_secretaffair, 1)}
+}
+->DONE
+
 ==talkTest
 You come across a  talking closet.
 

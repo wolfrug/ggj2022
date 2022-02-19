@@ -68,6 +68,10 @@ namespace Inventory {
         public InventoryItemAdded itemAddedEvent;
         public InventoryItemRemoved itemRemovedEvent;
 
+        public DragStarted itemDragStartedEvent;
+        public DragEnded itemDragEndedEvent;
+        public DragCompleted itemDragCompletedEvent;
+
         /*void OnEnabled () {
             if (!allInventories.Contains (this)) {
                 allInventories.Add (this);
@@ -467,19 +471,22 @@ namespace Inventory {
             target.transform.SetAsLastSibling ();
             contextMenuController.Cancel ();
             mainCanvas.sortingOrder = 999;
+            itemDragStartedEvent.Invoke (target);
         }
         void OnDragEnd (Item_DragAndDrop target) {
             isDragging = false;
             //  Debug.Log ("Ended drag");
             target.ResetDragTargetPosition ();
             mainCanvas.sortingOrder = defaultSortOrder;
+            itemDragEndedEvent.Invoke (target);
 
         }
         void OnDragCompleted (Item_DragAndDrop dragAndDropItem, Item_DragTarget target) {
             //if (GameManager.instance.GameState != GameStates.NARRATIVE) {
-            //  Debug.Log (name + " completed drag of " + dragAndDropItem.name + " on " + target.name, target.gameObject);
+            Debug.Log (name + " completed drag of " + dragAndDropItem.name + " on " + target.name, target.gameObject);
             TryTakeItem (dragAndDropItem, target);
             //}
+            itemDragCompletedEvent.Invoke (dragAndDropItem, target);
         }
 
         public void TryTakeItem (Item_DragAndDrop dragAndDropItem, Item_DragTarget target) {
@@ -493,6 +500,43 @@ namespace Inventory {
                 if (!TryCombineOrSplitExternal (dragAndDropItem, target.GetComponentInParent<Item_DragAndDrop> ())) {
                     TryTakeItemFromInventory (dragAndDropItem, target.GetComponentInParent<Item_DragAndDrop> ());
                 };
+            }
+        }
+
+        public void TryDropAll () { // same as what happens in the inventory crafting controller!
+            List<Item_DragAndDrop> copyList = new List<Item_DragAndDrop> { };
+            foreach (Item_DragAndDrop item in allItemBoxes) {
+                copyList.Add (item);
+            }
+            foreach (Item_DragAndDrop item in copyList) {
+                ReturnItemToPlayerInventory (item);
+            }
+        }
+
+        void ReturnItemToPlayerInventory (Item_DragAndDrop item) {
+            // Super ugly stuff incoming
+            if (item == null) {
+                Debug.LogError ("Tried to return null item, quitting", gameObject);
+                return;
+            }
+            bool success = false;
+            List<InventoryType> inventoriesToReturnTo = new List<InventoryType> { };
+            foreach (InventoryType type in item.targetBox.data.m_permittedInventories) {
+                if (type != data.m_type) { // don't add your -own- type
+                    inventoriesToReturnTo.Add (type);
+                };
+            }
+            foreach (InventoryType type in inventoriesToReturnTo) {
+                Debug.Log ("Attempting to return item " + item.targetBox.data.m_id + " to inventory " + type);
+                if (InventoryController.GetInventoryOfType (type, null, false) != null) {
+                    success = InventoryController.GetInventoryOfType (type, null, false).TryTakeItemFromInventory (item, null);
+                };
+                if (success) { // success!
+                    Debug.Log ("<color=green>Successfully returned item " + item.targetBox.data.m_id + " to inventory " + type + "</color>");
+                    return;
+                } else {
+                    Debug.Log ("<color=red>Failed to return item " + item.targetBox.data.m_id + " to inventory " + type + "</color>");
+                }
             }
         }
 
@@ -1114,16 +1158,20 @@ namespace Inventory {
         public void LoadInventory () {
             int index = IndexOfInventoryID (data.m_id, this);
             string inventorySaveName = string.Format ("{0}({1})", data.m_id.ToString (), gameObject.name);
-            savedInventory = ES3.Load<Dictionary<string, string>> (SaveManager.instance.CurrentSlot + "_SavedInventory_" + inventorySaveName, savedInventory);
-            ClearInventory ();
-            LoadAllItemDatas ();
-            foreach (KeyValuePair<string, string> kvp in savedInventory) {
-                ItemData data = GetDataByID (kvp.Value);
-                int itemIndex = int.Parse (kvp.Key.Split ('_') [0]); // we don't actually use the index thoughhhh
-                int itemStack = int.Parse (kvp.Key.Split ('_') [1]); // stack size!
-                AddItem (data, itemStack);
+            if (ES3.KeyExists (SaveManager.instance.CurrentSlot + "_SavedInventory_" + inventorySaveName)) {
+                savedInventory = ES3.Load<Dictionary<string, string>> (SaveManager.instance.CurrentSlot + "_SavedInventory_" + inventorySaveName, savedInventory);
+                ClearInventory ();
+                LoadAllItemDatas ();
+                foreach (KeyValuePair<string, string> kvp in savedInventory) {
+                    ItemData data = GetDataByID (kvp.Value);
+                    int itemIndex = int.Parse (kvp.Key.Split ('_') [0]); // we don't actually use the index thoughhhh
+                    int itemStack = int.Parse (kvp.Key.Split ('_') [1]); // stack size!
+                    AddItem (data, itemStack);
+                }
+                Debug.Log ("Loaded inventory: " + inventorySaveName);
+            } else {
+                Debug.Log ("Did not load inventory " + inventorySaveName + " because it was empty.");
             }
-            Debug.Log ("Loaded inventory: " + inventorySaveName);
         }
 
         public void ClearSavedInventory () {

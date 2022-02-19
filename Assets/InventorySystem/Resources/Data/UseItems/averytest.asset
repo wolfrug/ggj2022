@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e457aa8b996c774cacda12b4482ce93, type: 3}
+  m_Name: averytest
+  m_EditorClassIdentifier: 
+  m_id: universal_useitem
+  m_type: 1000
+  m_displayName: Use Item
+  m_description: Test
+  m_poolMinMax: {x: 0, y: 1}
+  m_poolIsInteger: 1
+  m_poolValueStart: 0
+  m_poolValueFormat: '{0}/{4}'
+  m_poolChangeValueFormat: '{1}{0}'
+  m_effectThresholds: {x: 0.1, y: 0.2, z: 0.25}
+  m_definitions:
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 8b48000d6c20c90429c23c7df6ac7004, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 4ac2d076797990e44bbdba3d202e916e, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 45c4bd80fe2c0da418d2824668359d17, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 7304c559382530645a24b035fb94ffd4, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: e28868be1f33a5f40821c58c2d4bc40c, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 406dd0d6f8bc3734eb07de9d0a767542, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: c1a2c6e3e742df5459ef67b3c495d8d6, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 625c0589127c32b4397cb35ccd01fcc9, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 1db51fa16ec854d4f9be051cef8e7068, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 142b388222fa3574ab30e87809962428, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 0290fdf733b0abb409b56fb9ff8a91ba, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 30ddfd04a0c91d84d86793dbc547e3ee, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: df34e7e9122a1824caa156d04367c9ab, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: afe567b1759bc9b48a740704e7a9a7f6, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: b3d17dd5a86cd7443a4d369ce34e3034, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: fb4f12ef6430a6b41896db32fec29e80, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: b8b52a2a0a7d19940bf0701ff33d7155, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: a845f1ec0a4d62540a343399cf5619b8, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: c7bddf64e0f83624fa8838999823f6c8, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: e988ea15f415eac46929772390bb1532, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 58810f8275a1e8f46b2e598a52cb2506, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 2ec7a2391ff2e334db26cd553153751d, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: d60b489325f55224d83e4ed3ac2454a6, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: useItemTest
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: d72bb1209b436b04891c999589fdc176, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []
+  - m_requiredDatas:
+    - {fileID: 11400000, guid: 1347ea1bc55e0e246b2cf28b89480800, type: 2}
+    m_gameTraits: 
+    m_anyTrait: 0
+    m_description: INVALID
+    m_effectPerUseVector: {x: 1, y: 1}
+    m_weight: 1
+    m_useItemResult: []

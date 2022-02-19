@@ -167,8 +167,10 @@ namespace Inventory {
                     if (item.targetBox.data.HasTrait (ItemTrait.USEABLE)) { // is it useable?
                         if ((m_countDown && m_pool.Value > m_pool.m_poolMinMax.x) || (!m_countDown && m_pool.Value < m_pool.m_poolMinMax.y)) {
                             if (m_stackManipulator != null && item.targetBox.data.HasTrait (ItemTrait.SPLITTABLE)) { // use stack manipulator?
+                                Debug.Log ("Consuming " + item.targetBox.data.m_displayName + " in use item " + m_data.m_displayName + "using stack manipulator");
                                 TryStackManipulator (item);
                             } else { // note: will only consume -one- item in this case
+                                Debug.Log ("Consuming " + item.targetBox.data.m_displayName + " in use item " + m_data.m_displayName + " not using stack manipulator");
                                 ConsumeItem (item, GetConsumeAmount (item.targetBox.data));
                             };
                         };
@@ -272,48 +274,57 @@ namespace Inventory {
 
         void ConsumeItem (Item_DragAndDrop item, int amount) {
             if ((m_countDown && m_pool.Value > m_pool.m_poolMinMax.x) || (!m_countDown && m_pool.Value < m_pool.m_poolMinMax.y)) {
+                Debug.Log ("Consume item of " + item + " starting with amount " + amount);
                 ItemData targetData = item.targetBox.data;
                 int consumeAmount = amount;
-                if (consumeAmount == 0) { consumeAmount = 1; }; // Default to 1
-                int maxLeft = (int) m_pool.Value;
-                if (!m_countDown) {
-                    maxLeft = (int) (m_pool.m_poolMinMax.y - m_pool.Value);
-                };
-                int changePerAmount = GetDefinition (targetData).m_effectPerUse;
                 int changeLoops = 0;
-                int targetChangedAmount = 0;
-                for (int i = 0; i < consumeAmount; i++) {
-                    Debug.Log ("Looping: maxLeft: " + maxLeft + " changeLoops: " + changeLoops + "Total amount: " + amount);
-                    if (item.targetBox.StackSize > 0 && maxLeft > 0) {
-                        maxLeft -= changePerAmount;
-                        if (amount > 0) {
-                            item.targetBox.StackSize--;
-                        };
-                        changeLoops++;
-                        targetChangedAmount += changePerAmount;
-                        changePerAmount = GetDefinition (targetData).m_effectPerUse;
-                    } else {
-                        break;
+                if (consumeAmount > 0) { // we can use items without consuming them
+                    //if (consumeAmount == 0) { consumeAmount = 1; }; // Default to 1
+                    int maxLeft = (int) m_pool.Value;
+                    if (!m_countDown) {
+                        maxLeft = (int) (m_pool.m_poolMinMax.y - m_pool.Value);
+                    };
+                    Debug.Log ("Max Left " + maxLeft);
+                    int changePerAmount = GetDefinition (targetData).m_effectPerUse;
+                    int targetChangedAmount = 0;
+                    Debug.Log ("Change loops: " + changeLoops + " targetchangeamount: " + targetChangedAmount);
+                    for (int i = 0; i < consumeAmount; i++) {
+                        Debug.Log ("Looping: maxLeft: " + maxLeft + " changeLoops: " + changeLoops + "Total amount: " + amount);
+                        if (item.targetBox.StackSize > 0 && maxLeft > 0) {
+                            maxLeft -= changePerAmount;
+                            if (amount > 0) {
+                                item.targetBox.StackSize--;
+                            };
+                            changeLoops++;
+                            targetChangedAmount += changePerAmount;
+                            changePerAmount = GetDefinition (targetData).m_effectPerUse;
+                        } else {
+                            break;
+                        }
                     }
-                }
-                int changedAmount = 0;
-                if (m_countDown) {
-                    targetChangedAmount *= -1;
-                    changedAmount = (int) m_pool.ChangePoolR (targetChangedAmount);
-                } else {
-                    changedAmount = (int) m_pool.ChangePoolR (targetChangedAmount);
-                }
-                // Sound!
-                //item.audioSource.PlayRandomType (SFXType.UI_INV_USE);
+                    int changedAmount = 0;
+                    if (m_countDown) {
+                        targetChangedAmount *= -1;
+                        changedAmount = (int) m_pool.ChangePoolR (targetChangedAmount);
+                    } else {
+                        changedAmount = (int) m_pool.ChangePoolR (targetChangedAmount);
+                    }
+                    // Sound!
+                    //item.audioSource.PlayRandomType (SFXType.UI_INV_USE);
 
-                if (item.targetBox.StackSize == 0 && targetData.HasTrait (ItemTrait.DESTROYABLE)) {
-                    DestroyBox (item);
+                    if (item.targetBox.StackSize == 0 && targetData.HasTrait (ItemTrait.DESTROYABLE)) {
+                        Debug.Log ("Destroying item in useitemspot " + item.targetBox.data.m_displayName);
+                        DestroyBox (item);
+                    }
+                    ItemRemovedEvent (item);
                 }
-                ItemRemovedEvent (item);
                 // Spawn items, omg
                 SpawnItems (GetDefinition (targetData), changeLoops);
                 m_usedItemEvent.Invoke (targetData, changeLoops);
+
                 ExitDrag (null, null); // to reset the tooltip
+            } else {
+                Debug.LogError ("Somehow the double-double check failed and this happened. No idea how.");
             }
         }
         void DestroyBox (Item_DragAndDrop target) {
@@ -328,6 +339,7 @@ namespace Inventory {
         }
 
         void SpawnItems (UseItemDefinition itemDefinition, int amount) {
+            if (amount < 1) { amount = 1; }; // we always spawn at least one item, right?
             if (itemDefinition.m_useItemResult.Length > 0) {
                 List<RandomizedInventoryItem> itemsToSpawn = InventoryController.GenerateRandomInventoryContent (itemDefinition.m_useItemResult, new Vector2Int (amount, amount));
                 foreach (RandomizedInventoryItem item in itemsToSpawn) {

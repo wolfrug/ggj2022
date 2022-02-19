@@ -75,7 +75,7 @@ namespace Inventory {
             }
             UpdateInteractability ();
         }
-        Transform DragPoint {
+        public Transform DragPoint {
             get {
                 if (dragPointObj == null) {
                     dragPointObj = new GameObject (gameObject.name + "DragPoint", typeof (RectTransform));

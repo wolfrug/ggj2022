@@ -193,6 +193,22 @@ public class GameManager : MonoBehaviour {
         GameState = continueState;
     }
 
+    public void InitUseItemListeners () { // Inits a listener that listens whenever an item is successfully used
+        Inventory.Item_UseItemSpot[] allUseItemSpots = FindObjectsOfType<Item_UseItemSpot> ();
+        foreach (Item_UseItemSpot item in allUseItemSpots) {
+            item.m_usedItemEvent.AddListener (UsedItem);
+        }
+    }
+
+    void UsedItem (ItemData item, int amount) {
+        // Sets a variable
+        if (item != null) {
+            Debug.Log ("Used item " + item.m_id + ", setting lastUsedItem to correct string & closing inventory");
+            InkWriter.main.story.variablesState["lastUsedItem"] = item.m_id;
+            CloseOwnInventory ();
+        }
+    }
+
     public void InitInventoryEvents () {
         Debug.Log ("Attempting to init inventory events");
         PlayerInventory = InventoryController.GetInventoryOfType (InventoryType.PLAYER, null, false);
@@ -218,9 +234,9 @@ public class GameManager : MonoBehaviour {
     void OpenInventory (InventoryController otherInventory) {
         SetState (GameStates.INVENTORY);
         Debug.Log ("Inventory opened " + otherInventory.gameObject);
-        if (otherInventory.type == InventoryType.LOOTABLE || otherInventory.type == InventoryType.CRAFTING) { // auto-open player inventory when opening lootable container
+        /*if (otherInventory.type == InventoryType.LOOTABLE || otherInventory.type == InventoryType.CRAFTING) { // auto-open player inventory when opening lootable container
             OpenOwnInventory ();
-        }
+        }*/
         if (otherInventory.type == InventoryType.CRAFTING) {
             InventoryController.GetInventoryOfType (InventoryType.CRAFTING_RESULTS, null, false).Visible = true;
         }
@@ -250,6 +266,8 @@ public class GameManager : MonoBehaviour {
     }
     public void OpenOwnInventory () {
         PlayerInventory.Visible = true;
+        InventoryController.GetInventoryOfType (InventoryType.CRAFTING, null, false).Visible = true;
+        InventoryController.GetInventoryOfType (InventoryType.CRAFTING_RESULTS, null, false).Visible = true;
         //PlayerClueInventory.Visible = true;
         masterInventory.SetActive (true);
         AudioManager.instance.PlaySFX ("UI_inventoryOpen");

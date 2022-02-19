@@ -329,7 +329,7 @@ namespace Inventory {
             craftButton.interactable = active;
         }
 
-        void ClearAllItemsFromInventory () {
+        public void ClearAllItemsFromInventory () {
             List<Item_DragAndDrop> copyList = new List<Item_DragAndDrop> { };
             foreach (Item_DragAndDrop item in parentController.allItemBoxes) {
                 copyList.Add (item);

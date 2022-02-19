@@ -110,4 +110,22 @@ public class UseItemData : ScriptableObject {
         m_id = name;
     }
 
+    [NaughtyAttributes.Button]
+    void AddAllItemsToData () {
+        List<ItemData> allItemDatas = new List<ItemData> { };
+        List<UseItemDefinition> newUseItemDefs = new List<UseItemDefinition> { };
+        Object[] loadedDatas = Resources.LoadAll ("Data/Items", typeof (ItemData));
+        foreach (Object obj in loadedDatas) {
+            allItemDatas.Add (obj as ItemData);
+        }
+        for (int i = 0; i < allItemDatas.Count; i++) {
+            UseItemDefinition newDef = new UseItemDefinition ();
+            newDef.m_requiredDatas = new ItemData[1];
+            newDef.m_requiredDatas[0] = allItemDatas[i];
+            newDef.m_description = "INVALID"; // default
+            newUseItemDefs.Add (newDef);
+        }
+        m_definitions = newUseItemDefs.ToArray ();
+    }
+
 }

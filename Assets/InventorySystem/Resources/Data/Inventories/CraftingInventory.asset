@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: CraftingInventory
   m_EditorClassIdentifier: 
   m_id: craftingInventory
-  m_displayName: Conclusions
+  m_displayName: Draw Conclusions
   m_clearOnInit: 1
-  m_defaultMaxSlots: 99
+  m_defaultMaxSlots: 2
   m_inventoryItemPrefab: {fileID: 2101062367706738013, guid: 975bfb41a639b064f886256847f6c059,
     type: 3}
   m_type: 3000
   m_modifiers: 00000000
-  m_allowContentFrom: b80b0000e9030000
+  m_allowContentFrom: e8030000e9030000
   m_defaultContent: []
   m_minMaxRandomItemsSpawned: {x: -1, y: -1}
   m_inventoryCanvasPrefab: {fileID: 0}

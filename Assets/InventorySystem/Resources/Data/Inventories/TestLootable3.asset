@@ -10,17 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7395f498b3633b24d87cc2188a68f3ee, type: 3}
-  m_Name: CraftingResults
+  m_Name: TestLootable3
   m_EditorClassIdentifier: 
-  m_id: CraftingResults
-  m_displayName: Conclusions
+  m_id: TestLootable3
+  m_displayName: Drawers
   m_clearOnInit: 1
-  m_defaultMaxSlots: 1
+  m_defaultMaxSlots: 9
   m_inventoryItemPrefab: {fileID: 2101062367706738013, guid: 975bfb41a639b064f886256847f6c059,
     type: 3}
-  m_type: 3300
+  m_type: 2000
   m_modifiers: 00000000
-  m_allowContentFrom: 
-  m_defaultContent: []
-  m_minMaxRandomItemsSpawned: {x: -1, y: -1}
+  m_allowContentFrom: e8030000d0070000
+  m_defaultContent:
+  - data: {fileID: 11400000, guid: d60b489325f55224d83e4ed3ac2454a6, type: 2}
+    weight: 1
+    guaranteed: 1
+    random_unique: 1
+    randomStackSize: {x: 1, y: 1}
+  - data: {fileID: 11400000, guid: 2ec7a2391ff2e334db26cd553153751d, type: 2}
+    weight: 1
+    guaranteed: 1
+    random_unique: 1
+    randomStackSize: {x: 1, y: 1}
+  m_minMaxRandomItemsSpawned: {x: 2, y: 2}
   m_inventoryCanvasPrefab: {fileID: 0}

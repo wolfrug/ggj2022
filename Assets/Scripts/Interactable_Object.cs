@@ -16,6 +16,7 @@ public enum Interactions {
     ACTIVATE = 3000,
     OPEN = 3100, // alt to activate
     TALK = 3200, // alt to activate
+    USE_ITEM = 3300,
     DEACTIVATE = 4000,
     CLOSE = 4100, // alt to deactivate
 }
@@ -29,7 +30,12 @@ public class Interactable_Object : MonoBehaviour {
     public string inspectKnotName = "inspectTest";
     public bool inspectWithThoughtBubble = true; // if set to true, do a thoughtbubble of the knot instead of going
     public string activateKnotName = "";
+    public Inventory.Item_UseItemSpot useItemSpot;
+    public ItemData currentActiveUseItem;
+    public string invalidUseItemKnot = "cannot_use_item";
 
+    public InventoryController inventory;
+    public bool disableInventoryIfEmpty = true; // just to make everything easier
     public string activateActionTrigger = "Interact";
     public string deactivateActionTrigger = "Interact";
     public float activateDistance = 1f;
@@ -69,6 +75,32 @@ public class Interactable_Object : MonoBehaviour {
         }
         if (targetRenderer != null) {
             targetRenderer.enabled = false;
+        }
+        CheckInventoryEmpty ();
+    }
+
+    public void CheckInventoryEmpty () {
+        if (inventory != null) {
+            if (inventory.allItemBoxes.Count == 0) {
+                if (disableInventoryIfEmpty) {
+                    DisableInventory ();
+                }
+            }
+        }
+    }
+
+    public void DisableInventory () {
+        if (inventory != null) {
+            inventory.Visible = false;
+            if (interactions.Contains (Interactions.ACTIVATE)) { // Remove the interaction
+                interactions.Remove (Interactions.ACTIVATE);
+                if (chosenInteraction == Interactions.ACTIVATE && interactions.Count > 0) {
+                    chosenInteraction = interactions[0];
+                }
+                if (interactions.Count == 1) { // Remove the context menu too :O :O
+                    hasContextMenu = false;
+                }
+            }
         }
     }
 
@@ -246,6 +278,11 @@ public class Interactable_Object : MonoBehaviour {
                     returnInteraction = Interactions.TALK;
                     break;
                 }
+            case ContextMenuEntryType.USE_ITEM: // alts
+                {
+                    returnInteraction = Interactions.USE_ITEM;
+                    break;
+                }
         }
         return returnInteraction;
     }
@@ -334,6 +371,16 @@ public class Interactable_Object : MonoBehaviour {
                     }
                     break;
                 }
+            case Interactions.USE_ITEM:
+                {
+                    // Activate actions
+                    if (Vector3.Distance (GameManager.instance.Player.transform.position, transform.position) <= activateDistance) {
+                        Interact (GameManager.instance.Player, Interactions.USE_ITEM);
+                    } else {
+                        GameManager.instance.Player.StartAutoTask (this, ContextMenuEntryType.USE_ITEM, true);
+                    }
+                    break;
+                }
         }
     }
     public void ContextMenuAction (ContextMenuEntryType actionType, GameObject target) {
@@ -381,6 +428,11 @@ public class Interactable_Object : MonoBehaviour {
                 case Interactions.TALK:
                     {
                         ActivateAction (agent, Interactions.TALK);
+                        break;
+                    }
+                case Interactions.USE_ITEM:
+                    {
+                        UseItemAction (agent);
                         break;
                     }
             }
@@ -448,6 +500,24 @@ public class Interactable_Object : MonoBehaviour {
             deactivateObjectEvent.Invoke (this, agent);
             agent.ActivateAction (deactivateActionTrigger, 0.5f, true);
         };
+    }
+
+    public void StartUseItemAction (ItemData data, int amount) { // For use with events externally
+        Debug.Log ("Starting use item action!");
+        currentActiveUseItem = data;
+        Action (Interactions.USE_ITEM);
+    }
+    void UseItemAction (BasicAgent agent) {
+        Debug.Log ("Use item action successfully completed!");
+        agent.ActivateAction (activateActionTrigger, 0.5f, true);
+        // So the way we do it is by seeing what the -description- is.
+        string description = useItemSpot.GetDefinition (currentActiveUseItem).m_description;
+        if (description == "INVALID") { // There's nothing
+            GameManager.instance.PlayWriterQueueFromKnot (invalidUseItemKnot);
+        } else { // Else we run the knot in the description!
+            InkWriter.main.GoToKnot (description);
+        }
+
     }
     public void SetInternalActive (bool set) {
         active = set;

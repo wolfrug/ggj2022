@@ -15,12 +15,12 @@ MonoBehaviour:
   m_id: playerClueInventory
   m_displayName: Clues
   m_clearOnInit: 1
-  m_defaultMaxSlots: 99
+  m_defaultMaxSlots: 12
   m_inventoryItemPrefab: {fileID: 2101062367706738013, guid: 975bfb41a639b064f886256847f6c059,
     type: 3}
   m_type: 1001
   m_modifiers: 00000000
-  m_allowContentFrom: b80b0000e40c0000d0070000
+  m_allowContentFrom: b80b0000d0070000e40c0000
   m_defaultContent: []
   m_minMaxRandomItemsSpawned: {x: -1, y: -1}
   m_inventoryCanvasPrefab: {fileID: 0}

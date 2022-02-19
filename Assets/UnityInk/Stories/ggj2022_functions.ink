@@ -28,6 +28,7 @@ VAR innerMonologueTextObject = "PlayerInnerThoughtsText"
 VAR portraitTextObjectName = "CharacterNameText"
 
 VAR useItemNumber = 0
+VAR lastUsedItem = ""
 
 EXTERNAL _CheckHasItem(x,y)
 EXTERNAL _ConsumeItem(x,y,z)
@@ -127,6 +128,41 @@ TB: {x}
 
 ==function ConvertToItem(targetItemString)===
 ~temp returnVar = item_none
+{targetItemString:
+- "clue_disguise":
+~returnVar = clue_disguise
+- "clue_residue":
+~returnVar = clue_residue
+- "item_key":
+~returnVar = item_key
+- "item_meetingNote":
+~returnVar = item_meetingNote
+- "item_brokenSerum":
+~returnVar = item_brokenSerum
+- "clue_danvers":
+~returnVar = clue_danvers
+- "clue_agoodman":
+~returnVar = clue_agoodman
+- "clue_hardtimes":
+~returnVar = clue_hardtimes
+- "clue_parapsychology":
+~returnVar = clue_parapsychology
+- "clue_secretaffair":
+~returnVar = clue_secretaffair
+- "clue_chemistry":
+~returnVar = clue_chemistry
+- "clue_ramkin":
+~returnVar = clue_ramkin
+- "clue_purist":
+~returnVar = clue_purist
+- "clue_meeting":
+~returnVar = clue_meeting
+- "clue_averyaffair":
+~returnVar = clue_averyaffair
+- "clue_fourthfloor":
+~returnVar = clue_fourthfloor
+}
+// and return
 ~return returnVar
 
 ===function UseButton(buttonName)===

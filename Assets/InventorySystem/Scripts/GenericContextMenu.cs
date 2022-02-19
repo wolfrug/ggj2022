@@ -31,6 +31,7 @@ namespace Inventory {
         ACTIVATE = 4000,
         OPEN = 4200, // alt to activate
         TALK = 4001, // alt to activate
+        USE_ITEM = 4002,
         SIT = 4002, // alt to activate
         DEACTIVATE = 4100,
         CLOSE = 4300, // alt to deactivate
